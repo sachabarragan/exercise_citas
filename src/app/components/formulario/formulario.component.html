@@ -1,0 +1,22 @@
+<form class="formulario">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" aria-describedby="nombreArea" [(ngModel)]="nuevaCita.nombre" [ngModelOptions]="{standalone: true}" required>
+      <div id="nombreArea" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputdate" class="form-label">Fecha</label>
+        <input type="date" class="form-control" id="exampleInputdate" [(ngModel)]="nuevaCita.fecha" [ngModelOptions]="{standalone: true}" required>
+    </div>
+    <div class="mb-3">
+        <label for="time" class="form-label">Hora</label>
+        <input type="time" class="form-control" id="time" [(ngModel)]="nuevaCita.hora" [ngModelOptions]="{standalone: true}" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="floatingTextarea">Sintomas</label>
+        <textarea class="form-control" placeholder="Introduzca los sintomas" id="floatingTextarea"  [(ngModel)]="nuevaCita.sintomas" [ngModelOptions]="{standalone: true}" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="guardarCita()">Guardar</button>
+  </form>

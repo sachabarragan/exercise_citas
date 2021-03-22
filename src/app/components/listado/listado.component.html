@@ -1,0 +1,12 @@
+<div class="card text-center" *ngFor="let cita of todasLasCitas; let i = index">
+    <div class="card-header">
+      CITA
+    </div>
+    <div class="card-body">
+        <p>Nombre: {{ cita.nombre }}</p>
+        <p>Fecha: {{ cita.fecha }}</p>
+        <p>Hora:  {{ cita.hora }}</p>
+        <p>Sintomas:  {{ cita.sintomas }}</p>
+      <a href="#" class="btn btn-danger" (click)="borrarCita(i)">Eliminar</a>
+    </div>
+</div>
